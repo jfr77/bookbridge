@@ -1,0 +1,29 @@
+.donate-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  width: 100%;
+  padding: 14px 20px;
+
+  background-color: #523a8a; /* purple */
+  color: white;
+
+  border: none;
+  border-radius: 9999px; /* pill shape */
+
+  font-size: 18px;
+  font-weight: 500;
+
+  cursor: pointer;
+}
+
+.donate-button:hover {
+  background-color: #46327a;
+}
+
+.donate-button .icon {
+  font-size: 20px;
+  line-height: 1;
+}
