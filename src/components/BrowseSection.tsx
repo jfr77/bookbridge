@@ -151,7 +151,7 @@ const sampleClassrooms: Classroom[] = [
         goal: 1806,
         urgent: true,
         imageUrl:
-            "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=1200&q=80",
+            "https://www.siemens-stiftung.org/wp-content/uploads/2024/05/projekt-bildung-experimento-suedafrika-zitronenbatterie-klasse.jpg",
     },
     {
         id: "c2",
@@ -164,7 +164,7 @@ const sampleClassrooms: Classroom[] = [
         raised: 0,
         goal: 1750,
         imageUrl:
-            "https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=1200&q=80",
+            "https://www.ed2go.com/common/images/1/17154/algebra-class.jpg",
     },
     {
         id: "c3",
@@ -177,7 +177,7 @@ const sampleClassrooms: Classroom[] = [
         raised: 658,
         goal: 1316,
         imageUrl:
-            "https://images.unsplash.com/photo-1529070538774-1843cb3265df?auto=format&fit=crop&w=1200&q=80",
+            "https://cms.zdv.uni-mainz.de/studium/wp-content/uploads/sites/12/2023/02/Englisch-BEd-Dijon.jpg",
     },
     {
         id: "c4",
@@ -190,7 +190,7 @@ const sampleClassrooms: Classroom[] = [
         raised: 1725,
         goal: 3450,
         imageUrl:
-            "https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&w=1200&q=80",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5Fyo-cdSAni5gjwuhlD3IJmA5St7-ZWrrgw&s",
     },
     {
         id: "c5",
@@ -203,7 +203,7 @@ const sampleClassrooms: Classroom[] = [
         raised: 1322,
         goal: 2204,
         imageUrl:
-            "https://images.unsplash.com/photo-1529390079861-591de354faf5?auto=format&fit=crop&w=1200&q=80",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHerUPK5BvTca4z5Fceu3unaexv2C5bn0Qww&s",
     },
     {
         id: "c6",
@@ -216,7 +216,7 @@ const sampleClassrooms: Classroom[] = [
         raised: 1658,
         goal: 1316,
         imageUrl:
-            "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtS7e-KIqD89ePssHIe_XELjMw48VVreMaIA&s",
     },
 
 ];
