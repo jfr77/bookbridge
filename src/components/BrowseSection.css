@@ -20,16 +20,14 @@
 .browse__thanks {
     background: #4b2f86;
     color: #fff;
-    padding: 10px 14px;
+    border: none;
     border-radius: 10px;
+    padding: 10px 18px;
+    font-weight: 600;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
     font-size: 12px;
     white-space: nowrap;
-    transition: background-color 0.2s, transform 0.1s;
-}
-
-.browse__thanks:hover {
-    background: #3d2569;
-    transform: translateY(-1px);
 }
 
 .browse__tabs {
@@ -278,3 +276,102 @@
 
 .muted { color: #666; }
 .small { font-size: 12px; }
+
+/* Footer */
+.browse__footer {
+    margin-top: 64px;
+    padding-top: 40px;
+    border-top: 1px solid #e0e0e0;
+    background: #f5f5f6;
+    margin-left: -20px;
+    margin-right: -20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.browse__footerContent {
+    max-width: 1120px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 48px;
+    padding-bottom: 40px;
+}
+
+.browse__footerBrand {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    flex-shrink: 0;
+}
+
+.browse__footerBrandName {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1a1a1a;
+}
+
+.browse__footerSocial {
+    display: flex;
+    gap: 16px;
+}
+
+.browse__socialIcon {
+    color: #999;
+    transition: color 0.2s;
+}
+
+.browse__socialIcon:hover {
+    color: #4b2f86;
+}
+
+.browse__socialIcon svg {
+    width: 20px;
+    height: 20px;
+}
+
+.browse__footerColumns {
+    display: flex;
+    gap: 64px;
+    flex: 1;
+    justify-content: flex-end;
+}
+
+.browse__footerColumn {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    min-width: 140px;
+}
+
+.browse__footerHeading {
+    font-size: 16px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 0 0 4px 0;
+}
+
+.browse__footerLink {
+    font-size: 14px;
+    color: #333;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.browse__footerLink:hover {
+    color: #4b2f86;
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+    .browse__footerContent {
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    .browse__footerColumns {
+        flex-direction: column;
+        gap: 32px;
+    }
+}
