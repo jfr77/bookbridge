@@ -2,334 +2,355 @@ import { useMemo, useState } from "react";
 import "./BrowseSection.css";
 
 type Learner = {
-    id: string;
-    name: string;
-    age: number;
-    city: string;
-    country: string;
-    school: string;
-    grade: string;
-    story: string;
-    booksNeeded: number;
-    tags: string[];
-    raised: number;
-    goal: number;
-    imageUrl: string;
+  id: string;
+  name: string;
+  age: number;
+  city: string;
+  country: string;
+  school: string;
+  grade: string;
+  story: string;
+  booksNeeded: number;
+  tags: string[];
+  raised: number;
+  goal: number;
+  imageUrl: string;
 };
 
 type Classroom = {
-    id: string;
-    title: string;
-    school: string;
-    location: string;
-    teacher: string;
-    students: number;
-    booksNeeded: number;
-    raised: number;
-    goal: number;
-    imageUrl: string;
-    urgent?: boolean;
+  id: string;
+  title: string;
+  school: string;
+  location: string;
+  teacher: string;
+  students: number;
+  booksNeeded: number;
+  raised: number;
+  goal: number;
+  imageUrl: string;
+  urgent?: boolean;
 };
 
 const sampleLearners: Learner[] = [
-    {
-        id: "l1",
-        name: "Amar Okafor",
-        age: 14,
-        city: "Lagos",
-        country: "Nigeria",
-        school: "Lagos Community Secondary School",
-        grade: "Grade 9",
-        story:
-            "Amar dreams of becoming a doctor. He walks 4km to school every day but lacks the science textbooks needed.",
-        booksNeeded: 3,
-        tags: ["science", "biology"],
-        raised: 40,
-        goal: 50,
-        imageUrl:
-            "https://images.unsplash.com/photo-1544717297-fa95b6ee9643?auto=format&fit=crop&w=1200&q=80",
-    },
-    {
-        id: "l2",
-        name: "Sofia Mendez",
-        age: 14,
-        city: "Quito",
-        country: "Ecuador",
-        school: "Instituto Nacional Quito",
-        grade: "Grade 9",
-        story:
-            "Sofia loves literature and writing. She dreams of being a journalist and needs books to keep learning.",
-        booksNeeded: 4,
-        tags: ["literature", "history", "science"],
-        raised: 38,
-        goal: 76,
-        imageUrl:
-            "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1200&q=80",
-    },
-    {
-        id: "l3",
-        name: "Rajesh Kumar",
-        age: 12,
-        city: "Rural Bihar",
-        country: "India",
-        school: "Village Primary School",
-        grade: "Grade 7",
-        story:
-            "Rajesh is the first in his family to attend school. He’s great at math but shares one torn textbook.",
-        booksNeeded: 3,
-        tags: ["mathematics", "physics"],
-        raised: 40,
-        goal: 50,
-        imageUrl:
-            "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=1200&q=80",
-    },
+  {
+    id: "l1",
+    name: "Amar Okafor",
+    age: 14,
+    city: "Lagos",
+    country: "Nigeria",
+    school: "Lagos Community Secondary School",
+    grade: "Grade 9",
+    story:
+      "Amar dreams of becoming a doctor. He walks 4km to school every day but lacks the science textbooks needed.",
+    booksNeeded: 3,
+    tags: ["science", "biology"],
+    raised: 40,
+    goal: 50,
+    imageUrl:
+      "https://www.unicef.org/nigeria/sites/unicef.org.nigeria/files/styles/hero_extended/public/Education.jpg.webp?itok=OCJgD4RY",
+  },
+  {
+    id: "l2",
+    name: "Sofia Mendez",
+    age: 14,
+    city: "Quito",
+    country: "Ecuador",
+    school: "Instituto Nacional Quito",
+    grade: "Grade 9",
+    story:
+      "Sofia loves literature and writing. She dreams of being a journalist and needs books to keep learning.",
+    booksNeeded: 4,
+    tags: ["literature", "history", "science"],
+    raised: 38,
+    goal: 76,
+    imageUrl:
+      "https://brokenchalk.org/wp-content/uploads/2022/05/ecuador-education.png",
+  },
+  {
+    id: "l3",
+    name: "Rajesh Kumar",
+    age: 12,
+    city: "Rural Bihar",
+    country: "India",
+    school: "Village Primary School",
+    grade: "Grade 7",
+    story:
+      "Rajesh is the first in his family to attend school. He’s great at math but shares one torn textbook.",
+    booksNeeded: 3,
+    tags: ["mathematics", "physics"],
+    raised: 40,
+    goal: 50,
+    imageUrl:
+      "https://cdn.pixabay.com/photo/2023/08/17/11/01/indian-school-children-8196294_960_720.jpg",
+  },
 ];
 
 const sampleClassrooms: Classroom[] = [
-    {
-        id: "c1",
-        title: "Grade 7 Science Class",
-        school: "Kibera Community School",
-        location: "Nairobi, Kenya",
-        teacher: "Ms. Wanjiku Kamau",
-        students: 42,
-        booksNeeded: 84,
-        raised: 950,
-        goal: 1806,
-        urgent: true,
-        imageUrl:
-            "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=1200&q=80",
-    },
-    {
-        id: "c2",
-        title: "Grade 10 Mathematics",
-        school: "Rural Secondary School",
-        location: "Uttar Pradesh, India",
-        teacher: "Mr. Rajesh Sharma",
-        students: 35,
-        booksNeeded: 70,
-        raised: 0,
-        goal: 1750,
-        imageUrl:
-            "https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=1200&q=80",
-    },
+  {
+    id: "c1",
+    title: "Grade 7 Science Class",
+    school: "Kibera Community School",
+    location: "Nairobi, Kenya",
+    teacher: "Ms. Wanjiku Kamau",
+    students: 42,
+    booksNeeded: 84,
+    raised: 950,
+    goal: 1806,
+    urgent: true,
+    imageUrl:
+      "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=1200&q=80",
+  },
+  {
+    id: "c2",
+    title: "Grade 10 Mathematics",
+    school: "Rural Secondary School",
+    location: "Uttar Pradesh, India",
+    teacher: "Mr. Rajesh Sharma",
+    students: 35,
+    booksNeeded: 70,
+    raised: 0,
+    goal: 1750,
+    imageUrl:
+      "https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=1200&q=80",
+  },
 ];
 
 function clamp(n: number, min: number, max: number) {
-    return Math.max(min, Math.min(max, n));
+  return Math.max(min, Math.min(max, n));
 }
 
 export default function BrowseSection() {
-    const [tab, setTab] = useState<"learners" | "classrooms">("learners");
+  const [tab, setTab] = useState<"learners" | "classrooms">("learners");
 
-    // filters (simple for now)
-    const [q, setQ] = useState("");
-    const [minAge, setMinAge] = useState(0);
-    const [maxAge, setMaxAge] = useState(100);
+  // filters (simple for now)
+  const [q, setQ] = useState("");
+  const [minAge, setMinAge] = useState(0);
+  const [maxAge, setMaxAge] = useState(100);
 
-    const learners = useMemo(() => {
-        const query = q.trim().toLowerCase();
-        return sampleLearners.filter((l) => {
-            const matchesQuery =
-                !query ||
-                `${l.name} ${l.city} ${l.country} ${l.school} ${l.story}`
-                    .toLowerCase()
-                    .includes(query);
+  const learners = useMemo(() => {
+    const query = q.trim().toLowerCase();
+    return sampleLearners.filter((l) => {
+      const matchesQuery =
+        !query ||
+        `${l.name} ${l.city} ${l.country} ${l.school} ${l.story}`
+          .toLowerCase()
+          .includes(query);
 
-            const matchesAge = l.age >= minAge && l.age <= maxAge;
+      const matchesAge = l.age >= minAge && l.age <= maxAge;
 
-            return matchesQuery && matchesAge;
-        });
-    }, [q, minAge, maxAge]);
+      return matchesQuery && matchesAge;
+    });
+  }, [q, minAge, maxAge]);
 
-    return (
-        <section className="browse">
-            <div className="browse__container">
-                <div className="browse__top">
-                    <div className="browse__tabs" role="tablist" aria-label="Browse tabs">
-                        <button
-                            className={`browse__tab ${tab === "learners" ? "is-active" : ""}`}
-                            onClick={() => setTab("learners")}
-                            role="tab"
-                            aria-selected={tab === "learners"}
-                        >
-                            Individual Learners
-                        </button>
-                        <button
-                            className={`browse__tab ${
-                                tab === "classrooms" ? "is-active" : ""
-                            }`}
-                            onClick={() => setTab("classrooms")}
-                            role="tab"
-                            aria-selected={tab === "classrooms"}
-                        >
-                            Classroom Batches
-                        </button>
-                    </div>
+  return (
+    <section className="browse">
+      <div className="browse__container">
+        <div className="browse__top">
+          <div className="browse__tabs" role="tablist" aria-label="Browse tabs">
+            <button
+              className={`browse__tab ${tab === "learners" ? "is-active" : ""}`}
+              onClick={() => setTab("learners")}
+              role="tab"
+              aria-selected={tab === "learners"}
+            >
+              Individual Learners
+            </button>
+            <button
+              className={`browse__tab ${
+                tab === "classrooms" ? "is-active" : ""
+              }`}
+              onClick={() => setTab("classrooms")}
+              role="tab"
+              aria-selected={tab === "classrooms"}
+            >
+              Classroom Batches
+            </button>
+          </div>
 
-                    <div className="browse__thanks">Thank you for making a difference &lt;3</div>
+          <div className="browse__thanks">
+            Thank you for making a difference &lt;3
+          </div>
+        </div>
+
+        {tab === "learners" ? (
+          <>
+            <div className="browse__filters">
+              <div className="filter__block">
+                <label className="filter__label">
+                  Find Learners to support
+                </label>
+                <div className="filter__row">
+                  <input
+                    className="filter__input"
+                    placeholder="Search by name or story..."
+                    value={q}
+                    onChange={(e) => setQ(e.target.value)}
+                  />
                 </div>
 
-                {tab === "learners" ? (
-                    <>
-                        <div className="browse__filters">
-                            <div className="filter__block">
-                                <label className="filter__label">Find Learners to support</label>
-                                <div className="filter__row">
-                                    <input
-                                        className="filter__input"
-                                        placeholder="Search by name or story..."
-                                        value={q}
-                                        onChange={(e) => setQ(e.target.value)}
-                                    />
-                                </div>
-
-                                <div className="filter__age">
-                                    <div className="filter__ageHeader">
-                                        <span>Age</span>
-                                        <span className="muted">{minAge}-{maxAge}</span>
-                                    </div>
-                                    <div className="filter__ageRow">
-                                        <input
-                                            type="range"
-                                            min={0}
-                                            max={100}
-                                            value={minAge}
-                                            onChange={(e) =>
-                                                setMinAge(clamp(Number(e.target.value), 0, maxAge))
-                                            }
-                                        />
-                                        <input
-                                            type="range"
-                                            min={0}
-                                            max={100}
-                                            value={maxAge}
-                                            onChange={(e) =>
-                                                setMaxAge(clamp(Number(e.target.value), minAge, 100))
-                                            }
-                                        />
-                                    </div>
-                                    <div className="muted small">Choose age range</div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <h3 className="browse__headline">
-                            Over {learners.length} children seeking your support
-                        </h3>
-
-                        <div className="grid">
-                            {learners.map((l) => (
-                                <article className="card" key={l.id}>
-                                    <div className="card__img">
-                                        <img src={l.imageUrl} alt={l.name} />
-                                    </div>
-
-                                    <div className="card__body">
-                                        <h4 className="card__title">
-                                            {l.name}, {l.age}
-                                        </h4>
-                                        <div className="card__meta">
-                                            <div>{l.city}, {l.country}</div>
-                                            <div>{l.school} • {l.grade}</div>
-                                        </div>
-
-                                        <p className="card__story">{l.story}</p>
-
-                                        <div className="card__books">
-                                            <span className="badge">📘</span> {l.booksNeeded} books needed
-                                        </div>
-
-                                        <div className="tags">
-                                            {l.tags.map((t) => (
-                                                <span className="tag" key={t}>{t}</span>
-                                            ))}
-                                        </div>
-
-                                        <div className="progressRow">
-                                            <div className="progressText">
-                                                <strong>${l.raised}</strong> of ${l.goal}
-                                            </div>
-                                            <div className="progressBar">
-                                                <div
-                                                    className="progressFill"
-                                                    style={{ width: `${Math.round((l.raised / l.goal) * 100)}%` }}
-                                                />
-                                            </div>
-                                            <div className="progressPct">
-                                                {Math.round((l.raised / l.goal) * 100)}%
-                                            </div>
-                                        </div>
-
-                                        <button className="btn btn--primary">♡ Donate</button>
-                                    </div>
-                                </article>
-                            ))}
-                        </div>
-                    </>
-                ) : (
-                    <>
-                        <div className="infoBox">
-                            <strong>Classroom Batch Sponsorship</strong>
-                            <div className="muted">
-                                Sponsor textbooks for entire classrooms and make a bigger impact.
-                                When you support a classroom batch, every student gets the materials
-                                they need to learn together.
-                            </div>
-                        </div>
-
-                        <h3 className="browse__headline">
-                            {sampleClassrooms.length} Classrooms seeking support
-                        </h3>
-
-                        <div className="grid">
-                            {sampleClassrooms.map((c) => (
-                                <article className="card" key={c.id}>
-                                    <div className="card__img">
-                                        <img src={c.imageUrl} alt={c.title} />
-                                        {c.urgent && <span className="pill pill--urgent">Urgent</span>}
-                                    </div>
-
-                                    <div className="card__body">
-                                        <h4 className="card__title">{c.title}</h4>
-                                        <div className="card__meta">
-                                            <div>{c.school}</div>
-                                            <div>{c.location}</div>
-                                        </div>
-
-                                        <div className="row2">
-                                            <div className="muted small">Teacher</div>
-                                            <div>{c.teacher}</div>
-                                        </div>
-
-                                        <div className="row2">
-                                            <div className="muted small">Books needed</div>
-                                            <div>{c.booksNeeded}</div>
-                                        </div>
-
-                                        <div className="progressRow">
-                                            <div className="progressText">
-                                                <strong>${c.raised}</strong> of ${c.goal}
-                                            </div>
-                                            <div className="progressBar">
-                                                <div
-                                                    className="progressFill"
-                                                    style={{ width: `${c.goal ? Math.round((c.raised / c.goal) * 100) : 0}%` }}
-                                                />
-                                            </div>
-                                            <div className="progressPct">
-                                                {c.goal ? Math.round((c.raised / c.goal) * 100) : 0}%
-                                            </div>
-                                        </div>
-
-                                        <button className="btn btn--primary">♡ Donate</button>
-                                    </div>
-                                </article>
-                            ))}
-                        </div>
-                    </>
-                )}
+                <div className="filter__age">
+                  <div className="filter__ageHeader">
+                    <span>Age</span>
+                    <span className="muted">
+                      {minAge}-{maxAge}
+                    </span>
+                  </div>
+                  <div className="filter__ageRow">
+                    <input
+                      type="range"
+                      min={0}
+                      max={100}
+                      value={minAge}
+                      onChange={(e) =>
+                        setMinAge(clamp(Number(e.target.value), 0, maxAge))
+                      }
+                    />
+                    <input
+                      type="range"
+                      min={0}
+                      max={100}
+                      value={maxAge}
+                      onChange={(e) =>
+                        setMaxAge(clamp(Number(e.target.value), minAge, 100))
+                      }
+                    />
+                  </div>
+                  <div className="muted small">Choose age range</div>
+                </div>
+              </div>
             </div>
-        </section>
-    );
+
+            <h3 className="browse__headline">
+              Over {learners.length} children seeking your support
+            </h3>
+
+            <div className="grid">
+              {learners.map((l) => (
+                <article className="card" key={l.id}>
+                  <div className="card__img">
+                    <img src={l.imageUrl} alt={l.name} />
+                  </div>
+
+                  <div className="card__body">
+                    <h4 className="card__title">
+                      {l.name}, {l.age}
+                    </h4>
+                    <div className="card__meta">
+                      <div>
+                        {l.city}, {l.country}
+                      </div>
+                      <div>
+                        {l.school} • {l.grade}
+                      </div>
+                    </div>
+
+                    <p className="card__story">{l.story}</p>
+
+                    <div className="card__books">
+                      <span className="badge">📘</span> {l.booksNeeded} books
+                      needed
+                    </div>
+
+                    <div className="tags">
+                      {l.tags.map((t) => (
+                        <span className="tag" key={t}>
+                          {t}
+                        </span>
+                      ))}
+                    </div>
+
+                    <div className="progressRow">
+                      <div className="progressText">
+                        <strong>${l.raised}</strong> of ${l.goal}
+                      </div>
+                      <div className="progressBar">
+                        <div
+                          className="progressFill"
+                          style={{
+                            width: `${Math.round((l.raised / l.goal) * 100)}%`,
+                          }}
+                        />
+                      </div>
+                      <div className="progressPct">
+                        {Math.round((l.raised / l.goal) * 100)}%
+                      </div>
+                    </div>
+
+                    <button className="btn btn--primary">♡ Donate</button>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </>
+        ) : (
+          <>
+            <div className="infoBox">
+              <strong>Classroom Batch Sponsorship</strong>
+              <div className="muted">
+                Sponsor textbooks for entire classrooms and make a bigger
+                impact. When you support a classroom batch, every student gets
+                the materials they need to learn together.
+              </div>
+            </div>
+
+            <h3 className="browse__headline">
+              {sampleClassrooms.length} Classrooms seeking support
+            </h3>
+
+            <div className="grid">
+              {sampleClassrooms.map((c) => (
+                <article className="card" key={c.id}>
+                  <div className="card__img">
+                    <img src={c.imageUrl} alt={c.title} />
+                    {c.urgent && (
+                      <span className="pill pill--urgent">Urgent</span>
+                    )}
+                  </div>
+
+                  <div className="card__body">
+                    <h4 className="card__title">{c.title}</h4>
+                    <div className="card__meta">
+                      <div>{c.school}</div>
+                      <div>{c.location}</div>
+                    </div>
+
+                    <div className="row2">
+                      <div className="muted small">Teacher</div>
+                      <div>{c.teacher}</div>
+                    </div>
+
+                    <div className="row2">
+                      <div className="muted small">Books needed</div>
+                      <div>{c.booksNeeded}</div>
+                    </div>
+
+                    <div className="progressRow">
+                      <div className="progressText">
+                        <strong>${c.raised}</strong> of ${c.goal}
+                      </div>
+                      <div className="progressBar">
+                        <div
+                          className="progressFill"
+                          style={{
+                            width: `${
+                              c.goal ? Math.round((c.raised / c.goal) * 100) : 0
+                            }%`,
+                          }}
+                        />
+                      </div>
+                      <div className="progressPct">
+                        {c.goal ? Math.round((c.raised / c.goal) * 100) : 0}%
+                      </div>
+                    </div>
+
+                    <button className="btn btn--primary">♡ Donate</button>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </>
+        )}
+      </div>
+    </section>
+  );
 }
