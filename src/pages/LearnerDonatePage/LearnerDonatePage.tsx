@@ -77,7 +77,15 @@ export default function LearnerDonatePage() {
                                 return;
                             }
 
-                            alert(`Donation started: $${donationAmount}`);
+                            // Navigate to payment page with donation data
+                            navigate("/payment", {
+                                state: {
+                                    amount: donationAmount,
+                                    recipientType: "learner",
+                                    recipientId: learner.id,
+                                    recipientName: `${learner.name}, ${learner.age}`,
+                                },
+                            });
                         }}
                     >
                         ♡ Complete Sponsorship
