@@ -278,9 +278,8 @@ export default function BrowseSection() {
                     <button 
                         className="browse__thanks" 
                         onClick={() => navigate("/dashboard")}
-                        style={{ background: "none", border: "none", cursor: "pointer", padding: 0 }}
                     >
-                        Thank you for making a difference &lt;3
+                        Your Impact
                     </button>
                 </div>
 

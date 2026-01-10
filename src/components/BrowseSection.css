@@ -20,16 +20,14 @@
 .browse__thanks {
     background: #4b2f86;
     color: #fff;
-    padding: 10px 14px;
+    border: none;
     border-radius: 10px;
+    padding: 10px 18px;
+    font-weight: 600;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
     font-size: 12px;
     white-space: nowrap;
-    transition: background-color 0.2s, transform 0.1s;
-}
-
-.browse__thanks:hover {
-    background: #3d2569;
-    transform: translateY(-1px);
 }
 
 .browse__tabs {
