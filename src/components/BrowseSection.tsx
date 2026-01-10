@@ -1,4 +1,5 @@
 import { useMemo, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./BrowseSection.css";
 
 type Learner = {
@@ -226,6 +227,7 @@ function clamp(n: number, min: number, max: number) {
 }
 
 export default function BrowseSection() {
+    const navigate = useNavigate();
     const [tab, setTab] = useState<"learners" | "classrooms">("learners");
 
     // filters (simple for now)
@@ -273,7 +275,13 @@ export default function BrowseSection() {
                         </button>
                     </div>
 
-                    <div className="browse__thanks">Thank you for making a difference &lt;3</div>
+                    <button 
+                        className="browse__thanks" 
+                        onClick={() => navigate("/dashboard")}
+                        style={{ background: "none", border: "none", cursor: "pointer", padding: 0 }}
+                    >
+                        Thank you for making a difference &lt;3
+                    </button>
                 </div>
 
                 {tab === "learners" ? (

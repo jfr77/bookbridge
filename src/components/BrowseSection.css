@@ -18,12 +18,18 @@
 }
 
 .browse__thanks {
-    background: #5a3f9b;
+    background: #4b2f86;
     color: #fff;
     padding: 10px 14px;
     border-radius: 10px;
     font-size: 12px;
     white-space: nowrap;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.browse__thanks:hover {
+    background: #3d2569;
+    transform: translateY(-1px);
 }
 
 .browse__tabs {

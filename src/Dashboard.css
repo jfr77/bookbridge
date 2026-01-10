@@ -1,0 +1,371 @@
+/* Dashboard Page */
+.dashboard {
+    min-height: 100vh;
+    background: #9c57ff;
+    color: white;
+}
+
+/* Header */
+.dashboard__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 32px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.dashboard__brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.dashboard__brandIcon {
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.dashboard__brandName {
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+}
+
+.dashboard__actions {
+    display: flex;
+    gap: 12px;
+}
+
+.dashboard__actionBtn {
+    background: #4b2f86;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.dashboard__actionBtn:hover {
+    background: #3d2569;
+}
+
+/* Main Content */
+.dashboard__main {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 32px 48px;
+}
+
+.dashboard__titleSection {
+    margin-bottom: 40px;
+}
+
+.dashboard__title {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.dashboard__heart {
+    font-size: 32px;
+}
+
+.dashboard__subtitle {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0;
+}
+
+/* Metrics */
+.dashboard__metrics {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin-bottom: 40px;
+}
+
+.metricCard {
+    background: white;
+    border-radius: 16px;
+    padding: 32px 24px;
+    color: #1a1a1a;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.metricCard__icon {
+    color: #9c57ff;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.metricCard__value {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #1a1a1a;
+}
+
+.metricCard__label {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Charts */
+.dashboard__charts {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin-bottom: 40px;
+}
+
+.chartCard {
+    background: white;
+    border-radius: 16px;
+    padding: 32px;
+    color: #1a1a1a;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.chartCard__title {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0 0 24px 0;
+    color: #1a1a1a;
+}
+
+.chartCard__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+}
+
+/* Bar Chart */
+.barChart {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    height: 200px;
+    width: 100%;
+    gap: 12px;
+}
+
+.barChart__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    height: 100%;
+}
+
+.barChart__bar {
+    width: 100%;
+    background: linear-gradient(180deg, #9c57ff 0%, #7c3aed 100%);
+    border-radius: 8px 8px 0 0;
+    margin-bottom: 8px;
+    min-height: 20px;
+}
+
+.barChart__label {
+    font-size: 12px;
+    color: #666;
+    font-weight: 500;
+}
+
+/* Donut Chart */
+.donutChart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.donutChart__legend {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.legendItem {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+    color: #333;
+}
+
+.legendItem__color {
+    width: 16px;
+    height: 16px;
+    border-radius: 4px;
+}
+
+/* Sponsorships */
+.dashboard__sponsorships {
+    background: white;
+    border-radius: 16px;
+    padding: 32px;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.sponsorships__title {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0 0 24px 0;
+    color: #1a1a1a;
+}
+
+.sponsorships__list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.sponsorshipItem {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px;
+    background: #f9f9f9;
+    border-radius: 12px;
+}
+
+.sponsorshipItem__icon {
+    color: #9c57ff;
+    flex-shrink: 0;
+}
+
+.sponsorshipItem__content {
+    flex: 1;
+}
+
+.sponsorshipItem__title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 4px;
+}
+
+.sponsorshipItem__meta {
+    font-size: 14px;
+    color: #666;
+}
+
+.sponsorshipItem__details {
+    text-align: right;
+}
+
+.sponsorshipItem__amount {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 4px;
+}
+
+.sponsorshipItem__time {
+    font-size: 12px;
+    color: #999;
+}
+
+/* Achievement */
+.dashboard__achievement {
+    margin-bottom: 48px;
+}
+
+.achievementCard {
+    background: white;
+    border-radius: 16px;
+    padding: 32px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.achievementCard__icon {
+    font-size: 48px;
+    flex-shrink: 0;
+}
+
+.achievementCard__content {
+    flex: 1;
+}
+
+.achievementCard__title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+}
+
+.achievementCard__message {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+    .dashboard__metrics {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .dashboard__charts {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .dashboard__header {
+        padding: 20px 24px;
+        flex-direction: column;
+        gap: 16px;
+        align-items: flex-start;
+    }
+
+    .dashboard__main {
+        padding: 0 24px 32px;
+    }
+
+    .dashboard__title {
+        font-size: 28px;
+    }
+
+    .dashboard__metrics {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .chartCard__content {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .barChart {
+        height: 150px;
+    }
+
+    .sponsorshipItem {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .sponsorshipItem__details {
+        text-align: left;
+        width: 100%;
+    }
+
+    .achievementCard {
+        flex-direction: column;
+        text-align: center;
+    }
+}
