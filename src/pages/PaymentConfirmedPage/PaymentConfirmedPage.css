@@ -1,0 +1,74 @@
+.successIcon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: #4f3aa6;
+    color: white;
+    display: grid;
+    place-items: center;
+    font-size: 48px;
+    font-weight: bold;
+    margin: 0 auto 24px;
+}
+
+.confirmedTitle {
+    font-size: 28px;
+    font-weight: 700;
+    margin: 0 0 20px 0;
+    text-align: center;
+    color: #4f3aa6;
+}
+
+.confirmedMessage {
+    width: 100%;
+    background: #e9f2ff;
+    color: #1d3fbf;
+    padding: 16px;
+    border-radius: 10px;
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0 0 24px 0;
+    text-align: center;
+}
+
+.summarySection {
+    width: 100%;
+    margin-bottom: 24px;
+    padding-top: 20px;
+    border-top: 1px solid #e9e9e9;
+}
+
+.summarySectionTitle {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0 0 16px 0;
+    color: #333;
+}
+
+.summaryRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #e9e9e9;
+    font-size: 14px;
+}
+
+.summaryRow:last-child {
+    border-bottom: none;
+}
+
+.summaryRow span {
+    color: #666;
+}
+
+.summaryRow strong {
+    color: #111;
+    font-size: 15px;
+}
+
+.transactionId {
+    font-family: monospace;
+    font-size: 13px;
+    color: #4f3aa6;
+}
