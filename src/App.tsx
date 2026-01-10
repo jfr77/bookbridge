@@ -4,6 +4,7 @@ import BrowseSection from "./components/BrowseSection";
 import Dashboard from "./components/Dashboard";
 import MyAccount from "./components/MyAccount";
 import LearnerDonatePage from "./pages/LearnerDonatePage/LearnerDonatePage";
+import ClassroomDonatePage from "./pages/ClassroomDonatePage/ClassroomDonatePage";
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
           }
         />
           <Route path="/donate/learner/:id" element={<LearnerDonatePage />} />
+          <Route path="/donate/classroom/:id" element={<ClassroomDonatePage />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/account" element={<MyAccount />} />
       </Routes>

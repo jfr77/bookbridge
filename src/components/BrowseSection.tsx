@@ -325,7 +325,12 @@ export default function BrowseSection() {
                                             </div>
                                         </div>
 
-                                        <button className="btn btn--primary">♡ Donate</button>
+                                        <button 
+                                            className="btn btn--primary"
+                                            onClick={() => navigate(`/donate/classroom/${c.id}`)}
+                                        >
+                                            ♡ Donate
+                                        </button>
                                     </div>
                                 </article>
                             ))}
