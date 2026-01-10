@@ -24,8 +24,21 @@ export default function Landing() {
     <div className="page">
       <header className="header">
         <div className="brand">
-          <div className="brandIcon" aria-hidden />
-          <span className="brandName">Bookbridge</span>
+            <div className="brandIcon" aria-hidden>
+                <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                >
+                    <path d="M6.5 3H11v14H6.5A2.5 2.5 0 0 0 4 19.5V5.5A2.5 2.5 0 0 1 6.5 3Z" />
+                    <path
+                        d="M13 3h4.5A2.5 2.5 0 0 1 20 5.5v14A2.5 2.5 0 0 0 17.5 17H13V3Z"
+                        opacity="0.65"
+                    />
+                </svg>
+            </div>
+            <span className="brandName">Bookbridge</span>
         </div>
 
         <div className="auth">
@@ -104,15 +117,23 @@ export default function Landing() {
           />
         </section>
 
-        <section className="ctaRow">
-          <button className="primaryCta">
-            <span className="heart" aria-hidden>
-              ♥
-            </span>
-            Get started
-          </button>
-          <button className="secondaryCta">Learn how it works</button>
-        </section>
+          <section className="ctaRow">
+              <button
+                  className="primaryCta"
+                  onClick={() => {
+                      document
+                          .getElementById("browse")
+                          ?.scrollIntoView({ behavior: "smooth" });
+                  }}
+              >
+    <span className="heart" aria-hidden>
+      ♥
+    </span>
+                  Get started
+              </button>
+
+              <button className="secondaryCta">Learn how it works</button>
+          </section>
       </main>
     </div>
   );

@@ -23,30 +23,65 @@ body {
 
 /* Header */
 .header {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 28px 28px 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 24px 48px;
 }
+.header {
+    width: 100%;
+}
+
+
 
 .brand {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
 }
+
 
 .brandIcon {
-    width: 34px;
-    height: 34px;
-    border: 3px solid rgba(0, 0, 0, 0.85);
-    border-radius: 6px;
+    width: 40px;
+    height: 40px;
+    background: #000;
+    color: #fff;
+    border-radius: 8px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.header {
+    justify-content: flex-start; /* don't distribute space evenly */
 }
 
-.brandName {
-    font-weight: 700;
+.brand {
+    margin: 0;            /* cancel any margin: 0 auto */
+    text-align: left;
 }
+
+.auth {
+    margin-left: auto;    /* pushes My Account all the way right */
+}
+.brand {
+    position: static !important;
+    transform: none !important;
+    left: auto !important;
+}
+
+
+
+.brandName {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+}
+
+
+
 
 .auth {
     display: flex;
@@ -54,15 +89,19 @@ body {
 }
 
 .authBtn {
-    background: #4b2f86;
+    padding: 10px 16px;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.25);
     color: #fff;
     border: none;
-    border-radius: 10px;
-    padding: 10px 18px;
-    font-weight: 600;
-    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+    font-weight: 500;
     cursor: pointer;
 }
+
+.authBtn:hover {
+    background: rgba(0, 0, 0, 0.35);
+}
+
 
 /* Main */
 .main {
@@ -168,3 +207,20 @@ body {
         align-items: center;
     }
 }
+.header .brand {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 12px !important;
+}
+
+.header .brandIcon {
+    flex: 0 0 auto !important;
+}
+
+.header .brandName {
+    display: block !important;
+    line-height: 1 !important;
+    margin: 0 !important;
+}
+

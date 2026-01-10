@@ -135,7 +135,7 @@ export default function BrowseSection() {
     }, [q, minAge, maxAge]);
 
     return (
-        <section className="browse">
+        <section className="browse" id="browse">
             <div className="browse__container">
                 <div className="browse__top">
                     <div className="browse__tabs" role="tablist" aria-label="Browse tabs">
