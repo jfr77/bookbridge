@@ -3,6 +3,8 @@ import Landing from "./components/Landing";
 import BrowseSection from "./components/BrowseSection";
 import Dashboard from "./components/Dashboard";
 import MyAccount from "./components/MyAccount";
+import LearnerDonatePage from "./pages/LearnerDonatePage/LearnerDonatePage";
+
 
 function App() {
   return (
@@ -17,7 +19,8 @@ function App() {
             </>
           }
         />
-        <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/donate/learner/:id" element={<LearnerDonatePage />} />
+          <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/account" element={<MyAccount />} />
       </Routes>
     </Router>
