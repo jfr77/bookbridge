@@ -21,8 +21,8 @@ export default function Dashboard() {
                     <button className="dashboard__actionBtn" onClick={() => navigate("/")}>
                         Hompage
                     </button>
-                    <button className="dashboard__actionBtn" onClick={() => navigate("/signin")}>
-                        Log Out
+                    <button className="dashboard__actionBtn" onClick={() => navigate("/account")}>
+                        My Account
                     </button>
                 </div>
             </header>

@@ -1,0 +1,333 @@
+/* My Account Page */
+.myAccount {
+    background: #f5f5f6;
+    min-height: 100vh;
+    padding: 40px 0;
+}
+
+.myAccount__container {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+.myAccount__header {
+    margin-bottom: 40px;
+}
+
+.myAccount__headerContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 24px;
+}
+
+.myAccount__headerActions {
+    display: flex;
+    gap: 12px;
+    flex-shrink: 0;
+}
+
+.myAccount__headerBtn {
+    background: #4b2f86;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 18px;
+    font-weight: 600;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.2s;
+}
+
+.myAccount__headerBtn:hover {
+    background: #3d2569;
+}
+
+.myAccount__title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 0 0 8px 0;
+}
+
+.myAccount__welcome {
+    font-size: 18px;
+    color: #666;
+    margin: 0;
+}
+
+/* Sections */
+.myAccount__section {
+    background: white;
+    border-radius: 12px;
+    padding: 32px;
+    margin-bottom: 24px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.myAccount__sectionTitle {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 0 0 24px 0;
+    padding-bottom: 16px;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+/* Personal Summary */
+.myAccount__summary {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.myAccount__summaryText {
+    font-size: 16px;
+    color: #333;
+    margin: 0;
+}
+
+.myAccount__total {
+    font-size: 18px;
+    color: #333;
+}
+
+.myAccount__total strong {
+    font-size: 24px;
+    color: #4b2f86;
+    font-weight: 700;
+}
+
+/* Donation History Table */
+.myAccount__table {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.myAccount__tableHeader {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 1fr;
+    gap: 16px;
+    padding: 16px 0;
+    border-bottom: 2px solid #e0e0e0;
+    font-weight: 600;
+    color: #666;
+    font-size: 14px;
+}
+
+.myAccount__tableRow {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 1fr;
+    gap: 16px;
+    padding: 20px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.myAccount__tableRow:last-child {
+    border-bottom: none;
+}
+
+.myAccount__tableCell {
+    display: flex;
+    align-items: center;
+    color: #333;
+    font-size: 14px;
+}
+
+.myAccount__donationTitle {
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-right: 8px;
+}
+
+.myAccount__donationMeta {
+    font-size: 13px;
+    color: #666;
+}
+
+.myAccount__date {
+    color: #999;
+    font-size: 13px;
+}
+
+/* Receipts & Contact */
+.myAccount__receipts {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.myAccount__emailRow {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.myAccount__label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+}
+
+.myAccount__emailInput {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    background: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+}
+
+.myAccount__emailDisplay {
+    flex: 1;
+    color: #333;
+    font-size: 14px;
+}
+
+.myAccount__input {
+    flex: 1;
+    padding: 8px 12px;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    font-size: 14px;
+    background: white;
+}
+
+.myAccount__input:focus {
+    outline: none;
+    border-color: #4b2f86;
+}
+
+.myAccount__editBtn {
+    background: #4b2f86;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 6px 16px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.myAccount__editBtn:hover {
+    background: #3d2569;
+}
+
+.myAccount__resendBtn {
+    background: white;
+    color: #4b2f86;
+    border: 2px solid #4b2f86;
+    border-radius: 8px;
+    padding: 12px 24px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+    align-self: flex-start;
+}
+
+.myAccount__resendBtn:hover {
+    background: #4b2f86;
+    color: white;
+}
+
+/* Preferences */
+.myAccount__preferences {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.myAccount__checkboxLabel {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+    color: #333;
+    cursor: pointer;
+}
+
+.myAccount__checkbox {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    accent-color: #4b2f86;
+}
+
+/* Actions */
+.myAccount__actions {
+    margin-top: 32px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.myAccount__backBtn {
+    background: #4b2f86;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 24px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+.myAccount__backBtn:hover {
+    background: #3d2569;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .myAccount__container {
+        padding: 0 16px;
+    }
+
+    .myAccount__headerContent {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .myAccount__headerActions {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .myAccount__headerBtn {
+        width: 100%;
+    }
+
+    .myAccount__section {
+        padding: 24px;
+    }
+
+    .myAccount__tableHeader,
+    .myAccount__tableRow {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .myAccount__tableHeader {
+        display: none;
+    }
+
+    .myAccount__tableCell {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .myAccount__tableCell::before {
+        content: attr(data-label);
+        font-weight: 600;
+        color: #666;
+        font-size: 12px;
+        margin-bottom: 4px;
+    }
+}

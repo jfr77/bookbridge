@@ -29,10 +29,9 @@ export default function Landing() {
         </div>
 
         <div className="auth">
-          <button className="authBtn" onClick={() => navigate("/signin")}>
-            Sign In
+          <button className="authBtn" onClick={() => navigate("/account")}>
+            My Account
           </button>
-          <button className="authBtn">Sign Up</button>
         </div>
       </header>
 
