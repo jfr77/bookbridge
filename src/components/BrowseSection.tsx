@@ -48,7 +48,7 @@ const sampleLearners: Learner[] = [
         raised: 40,
         goal: 50,
         imageUrl:
-            "https://images.unsplash.com/photo-1544717297-fa95b6ee9643?auto=format&fit=crop&w=1200&q=80",
+            "https://www.unicef.org/nigeria/sites/unicef.org.nigeria/files/styles/hero_extended/public/Education.jpg.webp?itok=OCJgD4RY",
     },
     {
         id: "l2",
@@ -65,7 +65,7 @@ const sampleLearners: Learner[] = [
         raised: 38,
         goal: 76,
         imageUrl:
-            "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1200&q=80",
+            "https://staticsb.we.org/f/52095/1152x640/853a99557e/ecuador-carousel-10.jpg",
     },
     {
         id: "l3",
@@ -82,7 +82,7 @@ const sampleLearners: Learner[] = [
         raised: 40,
         goal: 50,
         imageUrl:
-            "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=1200&q=80",
+            "https://t4.ftcdn.net/jpg/02/07/75/85/360_F_207758573_b6gcG682P2kBK7n9nW80heeoXJb15SGW.jpg",
     },
     {
         id: "l4",
@@ -99,7 +99,7 @@ const sampleLearners: Learner[] = [
         raised: 48,
         goal: 66,
         imageUrl:
-            "https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&w=1200&q=80",
+            "https://brauwelt.com/images/BWI_NL/NL_2020/6-Juni/brauwelt-sidel-ghana-school-2020.jpg",
     },
     {
         id: "l5",
@@ -116,7 +116,7 @@ const sampleLearners: Learner[] = [
         raised: 40,
         goal: 80,
         imageUrl:
-            "https://images.unsplash.com/photo-1504151932400-72d4384f04b3?auto=format&fit=crop&w=1200&q=80",
+            "https://media.istockphoto.com/id/953577648/photo/vietnamese-schoolgirls-on-a-schoolyard-south-vietnam.jpg?s=612x612&w=0&k=20&c=XiXdlcIRTdxpfp2sTxRZyc8cyWDcxQt4Mv21RXovfA8=",
     },
     {
         id: "l6",
@@ -133,7 +133,7 @@ const sampleLearners: Learner[] = [
         raised: 40,
         goal: 48,
         imageUrl:
-            "https://images.unsplash.com/photo-1503457574465-43dcd1b85d65?auto=format&fit=crop&w=1200&q=80",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUo6SziX54h7yEEjm5usQzR2186-xgzEcvQQ&s",
     },
 
 ];
