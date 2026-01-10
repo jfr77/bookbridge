@@ -1,8 +1,9 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
-import './App.css'
+//import './App.css'
 import Landing from "./components/Landing"
+import BrowseSection from "./components/BrowseSection"
 
 
 
@@ -12,6 +13,7 @@ function App() {
   return (
     <>
         <Landing />
+        <BrowseSection />
       <div>
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />

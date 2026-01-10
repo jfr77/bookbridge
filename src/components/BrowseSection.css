@@ -1,0 +1,274 @@
+.browse {
+    background: #f5f5f6;
+    padding: 40px 0 64px;
+}
+
+.browse__container {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.browse__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 14px;
+}
+
+.browse__thanks {
+    background: #5a3f9b;
+    color: #fff;
+    padding: 10px 14px;
+    border-radius: 10px;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+.browse__tabs {
+    display: flex;
+    gap: 18px;
+    border-bottom: 1px solid #ddd;
+}
+
+.browse__tab {
+    border: none;
+    background: transparent;
+    padding: 10px 2px;
+    cursor: pointer;
+    font-size: 13px;
+    color: #666;
+}
+
+.browse__tab.is-active {
+    color: #5a3f9b;
+    border-bottom: 2px solid #5a3f9b;
+    margin-bottom: -1px;
+}
+
+.browse__filters {
+    margin: 14px 0 18px;
+}
+
+.filter__block {
+    background: #fff;
+    border: 1px solid #d9d9d9;
+    border-radius: 10px;
+    padding: 14px;
+}
+
+.filter__label {
+    display: block;
+    font-size: 12px;
+    color: #444;
+    margin-bottom: 8px;
+}
+
+.filter__row {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.filter__input {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #e1e1e1;
+    border-radius: 999px;
+    outline: none;
+}
+
+.filter__age {
+    margin-top: 14px;
+}
+
+.filter__ageHeader {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6px;
+    font-size: 12px;
+}
+
+.filter__ageRow {
+    display: grid;
+    gap: 8px;
+}
+
+.browse__headline {
+    margin: 18px 0 16px;
+    font-size: 16px;
+    color: #111;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+@media (max-width: 980px) {
+    .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 640px) {
+    .browse__top { flex-direction: column; align-items: flex-start; }
+    .grid { grid-template-columns: 1fr; }
+}
+
+.card {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+}
+
+.card__img {
+    position: relative;
+    height: 170px;
+    overflow: hidden;
+}
+
+.card__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.card__body {
+    padding: 14px;
+}
+
+.card__title {
+    margin: 0;
+    font-size: 14px;
+    color: #111;
+}
+
+.card__meta {
+    margin-top: 6px;
+    font-size: 12px;
+    color: #6a6a6a;
+    display: grid;
+    gap: 4px;
+}
+
+.card__story {
+    margin: 10px 0;
+    font-size: 12px;
+    color: #2c2c2c;
+    line-height: 1.35;
+    min-height: 48px;
+}
+
+.card__books {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    margin: 10px 0 8px;
+}
+
+.badge {
+    width: 20px;
+    height: 20px;
+    display: grid;
+    place-items: center;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 10px;
+}
+
+.tag {
+    font-size: 11px;
+    padding: 4px 8px;
+    border: 1px solid #e2e2e2;
+    border-radius: 999px;
+    color: #555;
+    background: #fafafa;
+}
+
+.progressRow {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+    margin: 8px 0 12px;
+}
+
+.progressText {
+    font-size: 12px;
+    color: #111;
+}
+
+.progressBar {
+    height: 7px;
+    border-radius: 999px;
+    background: #e9e9e9;
+    overflow: hidden;
+}
+
+.progressFill {
+    height: 100%;
+    background: #1c1c1c;
+    border-radius: 999px;
+}
+
+.progressPct {
+    font-size: 12px;
+    color: #555;
+    text-align: right;
+}
+
+.btn {
+    width: 100%;
+    padding: 11px 12px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.btn--primary {
+    background: #4f3aa6;
+    color: #fff;
+}
+
+.infoBox {
+    background: #e9f2ff;
+    border: 1px solid #cfe1ff;
+    padding: 12px 14px;
+    border-radius: 10px;
+    margin: 14px 0 18px;
+    display: grid;
+    gap: 6px;
+}
+
+.pill {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 11px;
+    padding: 5px 8px;
+    border-radius: 999px;
+    background: #222;
+    color: #fff;
+}
+
+.pill--urgent {
+    background: #ff3b30;
+}
+
+.row2 {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.muted { color: #666; }
+.small { font-size: 12px; }
