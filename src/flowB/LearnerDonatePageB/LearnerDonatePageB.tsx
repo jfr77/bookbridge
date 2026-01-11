@@ -216,7 +216,7 @@ export default function LearnerDonatePageB() {
               the selected amount.
             </div>
             <button type="submit" className="ctaBtn">
-              ♡ Complete Sponsorship
+              ♡ Complete Donation
             </button>
           </form>
         </div>
