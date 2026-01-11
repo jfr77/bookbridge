@@ -6,7 +6,7 @@ import Dashboard from "./components/Dashboard";
 import MyAccount from "./components/MyAccount";
 import { LearnerDonateRouter, ClassroomDonateRouter } from "./components/DonateRouter";
 import { PaymentRouter, PaymentConfirmedRouter } from "./components/PaymentRouter";
-import PaymentPage from "./flowA/PaymentPage/PaymentPage";
+//import PaymentPage from "./flowA/PaymentPage/PaymentPage";
 import DonationSummaryPage from "./flowA/DonationSummaryPage/DonationSummaryPage";
 
 function App() {

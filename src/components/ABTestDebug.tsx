@@ -7,12 +7,13 @@ import { useABTest } from "../contexts/ABTestContext";
  * Usage: Add <ABTestDebug /> to any page to see the current variant
  */
 export function ABTestDebug() {
-    const { variant, isFlowA, isFlowB, setVariant } = useABTest();
+    const { variant, isFlowA, setVariant } = useABTest();
 
     // Only show in development
-    if (process.env.NODE_ENV === "production") {
+    if (import.meta.env.PROD) {
         return null;
     }
+
 
     return (
         <div
