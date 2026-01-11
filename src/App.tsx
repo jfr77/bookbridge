@@ -1,37 +1,39 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { ABTestProvider } from "./contexts/ABTestContext";
 import Landing from "./components/Landing";
 import BrowseSection from "./components/BrowseSection";
 import Dashboard from "./components/Dashboard";
 import MyAccount from "./components/MyAccount";
-import LearnerDonatePage from "./pages/LearnerDonatePage/LearnerDonatePage";
-import ClassroomDonatePage from "./pages/ClassroomDonatePage/ClassroomDonatePage";
-import PaymentPage from "./pages/PaymentPage/PaymentPage";
-import DonationSummaryPage from "./pages/DonationSummaryPage/DonationSummaryPage";
-import PaymentConfirmedPage from "./pages/PaymentConfirmedPage/PaymentConfirmedPage";
-
+import { LearnerDonateRouter, ClassroomDonateRouter } from "./components/DonateRouter";
+import { PaymentRouter, PaymentConfirmedRouter } from "./components/PaymentRouter";
+import PaymentPage from "./flowA/PaymentPage/PaymentPage";
+import DonationSummaryPage from "./flowA/DonationSummaryPage/DonationSummaryPage";
 
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <>
-              <Landing />
-              <BrowseSection />
-            </>
-          }
-        />
-          <Route path="/donate/learner/:id" element={<LearnerDonatePage />} />
-          <Route path="/donate/classroom/:id" element={<ClassroomDonatePage />} />
-          <Route path="/payment" element={<PaymentPage />} />
+    <ABTestProvider>
+      <Router>
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <Landing />
+                <BrowseSection />
+              </>
+            }
+          />
+          <Route path="/donate/learner/:id" element={<LearnerDonateRouter />} />
+          <Route path="/donate/classroom/:id" element={<ClassroomDonateRouter />} />
+          <Route path="/payment" element={<PaymentRouter />} />
           <Route path="/donation-summary" element={<DonationSummaryPage />} />
-          <Route path="/payment-confirmed" element={<PaymentConfirmedPage />} />
+          <Route path="/payment-confirmed" element={<PaymentConfirmedRouter />} />
+          <Route path="/payment-confirmed-b" element={<PaymentConfirmedRouter />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/account" element={<MyAccount />} />
-      </Routes>
-    </Router>
+        </Routes>
+      </Router>
+    </ABTestProvider>
   );
 }
 

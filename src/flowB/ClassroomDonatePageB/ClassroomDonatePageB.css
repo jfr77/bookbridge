@@ -1,0 +1,204 @@
+.donatePage {
+    min-height: 100vh;
+    background: #d9d9d9;
+}
+
+.donateTop {
+    position: relative;
+    padding: 18px 24px;
+}
+
+.backBtn {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.brand {
+    position: absolute;
+    left: 50%;
+    top: 14px;
+    transform: translateX(-50%);
+    display: grid;
+    justify-items: center;
+    gap: 6px;
+}
+
+.logoMark {
+    font-size: 22px;
+}
+
+.brandName {
+    font-weight: 700;
+    color: #4f3aa6;
+    font-size: 22px;
+}
+
+.donateCardWrap {
+    display: grid;
+    place-items: center;
+    padding: 36px 16px 60px;
+}
+
+.donateCard {
+    width: min(520px, 95vw);
+    background: #fff;
+    border-radius: 14px;
+    padding: 18px 18px 22px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+    display: grid;
+    gap: 10px;
+    justify-items: center;
+}
+
+.learnerImg {
+    width: 260px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.learnerTitle {
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.learnerMeta {
+    font-size: 13px;
+    color: #444;
+    display: grid;
+    gap: 4px;
+    text-align: center;
+}
+
+.storyBox {
+    width: 100%;
+    background: #dfe8ff;
+    color: #1d3fbf;
+    padding: 10px 12px;
+    border-radius: 10px;
+    font-size: 13px;
+    line-height: 1.35;
+}
+
+.donationForm {
+    width: 100%;
+    display: grid;
+    gap: 20px;
+}
+
+.amountSection {
+    display: grid;
+    gap: 8px;
+    margin-top: 4px;
+    justify-items: center;
+}
+
+.amountLabel {
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.amountRow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 4px 0 8px;
+}
+
+.currency {
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.amountInput {
+    width: 180px;
+    padding: 10px 12px;
+    border: none;
+    background: #efefef;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 700;
+    outline: none;
+}
+
+.paymentSection {
+    width: 100%;
+    padding-top: 16px;
+    border-top: 1px solid #e0e0e0;
+}
+
+.paymentSectionTitle {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0 0 16px 0;
+    text-align: center;
+}
+
+.paymentForm {
+    width: 100%;
+    display: grid;
+    gap: 16px;
+}
+
+.formGroup {
+    display: grid;
+    gap: 8px;
+}
+
+.formRow {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.formLabel {
+    font-size: 13px;
+    font-weight: 600;
+    color: #333;
+}
+
+.formInput {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.formInput:focus {
+    border-color: #4f3aa6;
+}
+
+.formInput::placeholder {
+    color: #999;
+}
+
+.ctaBtn {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    background: #4f3aa6;
+    color: #fff;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: 8px;
+    transition: background 0.2s;
+}
+
+.ctaBtn:hover {
+    background: #3d2e85;
+}
+
+@media (max-width: 640px) {
+    .formRow {
+        grid-template-columns: 1fr;
+    }
+}
